@@ -5,6 +5,9 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 // import history from "./history";
+// import { createBrowserHistory } from 'history';
+// const history = createBrowserHistory();
+
 import store from "./store";
 
 import Navbar from "./components/layout/Navbar";
