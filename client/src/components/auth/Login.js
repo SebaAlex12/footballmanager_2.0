@@ -7,9 +7,15 @@ import { Container, Form, Button } from '../../themes/basic';
 
 const Login = () => {
   
-  const dispatch = useDispatch();
+  const isAuth = useSelector(state=>state.auth.isAuthenticated);
+  
+  if(isAuth){
+    window.location.href = "/dashboard";
+  }
 
+  const dispatch = useDispatch();
   const errors = useSelector(state => state.errors);
+
 
   const email = useRef();
   const password = useRef();
