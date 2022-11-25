@@ -1,12 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container, Button } from '../../themes/basic';
+import { logoutUser } from '../../actions/authActions';
 
 const Navbar = () => {
 
   const { isAuthenticated, user } = useSelector(state => state.auth);
+  const dispatch = useDispatch(); 
+
+  const logoutHandler = () => {
+      dispatch(logoutUser());
+  }
 
   const authLinks = (
       <ul className="nav-list">
@@ -21,9 +27,7 @@ const Navbar = () => {
           </Link>
         </li> */}
         <li>
-          <Button
-            className="logoutBtn"
-          >
+          <Button onClick={logoutHandler}>
             <img
               src={user.avatar && user.avatar}
               alt={user.name && user.name}
@@ -87,8 +91,9 @@ const NavBox = styled.nav`
       justify-content:space-between;
       align-items:center;
     }
-    .logoutBtn img{
+    img{
       max-width:50px;
+      margin:5px;
     }
     .badge{
       padding:10px 15px;

@@ -1,7 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
-
 const MatchCard = ({ name, sufix, goals }) => {
+  // const imageUrl = require(`../../../src/img/flags/${sufix}.jpg`);
   return (
     <span>
       <div
@@ -12,17 +10,13 @@ const MatchCard = ({ name, sufix, goals }) => {
       </div>
       <img
         className="ml-2 mr-2"
-        src={`img/flags/${sufix}.jpg`}
+        // src={imageUrl}
         alt=""
         style={{ width: "26px" }}
       />
       {goals}
     </span>
   );
-};
-
-MatchCard.propTypes = {
-  name: PropTypes.string.isRequired,
 };
 
 export default MatchCard;

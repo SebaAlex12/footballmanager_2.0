@@ -267,7 +267,7 @@ class MatchItem extends Component {
                   I drużyna
                 </p>
                 <br />
-                <img src={`img/flags/${firstTeamSufix}.jpg`} alt="" />
+                <img src={`../../../src/img/flags/${firstTeamSufix}.jpg`} alt="" />
                 <br />
                 <p className="text-center">{firstTeamName}</p>
               </div>
@@ -322,7 +322,7 @@ class MatchItem extends Component {
                   II drużyna
                 </p>
                 <br />
-                <img src={`img/flags/${secondTeamSufix}.jpg`} alt="" />
+                <img src={`../../../src/img/flags/${secondTeamSufix}.jpg`} alt="" />
                 <br />
                 <p className="text-center">{secondTeamName}</p>
               </div>

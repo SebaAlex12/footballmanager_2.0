@@ -26,7 +26,35 @@ export const Container = styled.div`
     .btn.active{
         background-color:#4b7781;
     }
+    .error-message{
+        color:red;
+    }
+    .success-message{
+        color:green;
+    }
 `;
-export const Button = styled.div`
+export const Button = styled.button`
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: grey;
+    border: 1px solid #000;
+    margin: 5px;
+`;
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .form-group{
+        display:flex;
+        flex-direction:column;
+    }
+    input{
+        padding: 10px 15px;
+        font-size: 14px;
+        border: 1px solid grey;
+    }
+    input[type:submit]{
+
+    }
 
 `;

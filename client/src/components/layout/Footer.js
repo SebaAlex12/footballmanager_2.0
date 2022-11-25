@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { Container } from "../../themes/basic";
 
+import logo from "../../../src/img/logo_euro_2020.png";
+
 const Footer = () => {
   return (
     <FooterBox className="footer-box">
@@ -9,7 +11,7 @@ const Footer = () => {
               <div className="content">
                   <Link className="nav-link" to="/">
                     <img
-                      src="img/logo_euro_2020.png"
+                      src={logo}
                       alt="logo"
                       style={{ width: "85px" }}
                       className="thumbnail"

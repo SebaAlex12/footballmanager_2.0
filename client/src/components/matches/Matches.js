@@ -31,9 +31,9 @@ class Matches extends Component {
     };
   }
   componentDidMount = async() => {
-    if (this.props.auth.isAuthenticated === false) {
-      this.props.history.push("/");
-    }
+    // if (this.props.auth.isAuthenticated === false) {
+    //   this.props.history.push("/");
+    // }
     const { matches } = this.props.match;
     if(matches.length > 0){
       this.setState({

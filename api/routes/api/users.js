@@ -79,7 +79,7 @@ router.post("/login", (req, res) => {
   User.findOne({ email }).then(user => {
     // check for user
     if (!user) {
-      errors.email = "User not found";
+      errors.email = "Użytkownik nie istnieje";
       return res.status(404).json(errors);
     }
 
@@ -107,7 +107,7 @@ router.post("/login", (req, res) => {
           }
         );
       } else {
-        errors.password = "Password incorect";
+        errors.password = "Hasło jest nieprawidłowe";
         return res.status(400).json(errors);
       }
     });
